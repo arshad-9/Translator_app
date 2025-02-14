@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    android:orientation="vertical">
+
+    <TextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="FireTranslator"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <Spinner
+
+                android:id="@+id/languageSpinnerFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/swap" />
+
+            <Spinner
+                android:id="@+id/languageSpinnerTo"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp" />
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:elevation="10dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        app:cardCornerRadius="10dp">
+
+
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputText"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@android:color/transparent"
+                android:gravity="top|start"
+                android:hint="Enter Text"
+                android:inputType="textMultiLine"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.cardview.widget.CardView>
+
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/outputCard"
+    android:visibility="gone"
+    android:elevation="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginEnd="20dp"
+    app:cardCornerRadius="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/outputText"
+            android:layout_width="304dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.114" />
+
+        <ImageView
+            android:id="@+id/speakingBee"
+            android:layout_width="46dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="5dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/speaking"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/outputText"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:id="@+id/translationButton"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/blue"
+        android:text="Translate" />
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/inputMic"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/microphone"
+            android:layout_marginEnd="50dp"
+            />
+
+        <ImageView
+
+            android:id="@+id/camera"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image"
+             />
+
+    </LinearLayout>
+</LinearLayout>
